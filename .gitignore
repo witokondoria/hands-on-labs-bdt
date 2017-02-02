@@ -1,0 +1,9 @@
+### Ignore files
+
+# IntelliJ project files
+.idea
+*.iml
+*.log
+
+_ajdump
+target
