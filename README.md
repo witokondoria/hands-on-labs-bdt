@@ -17,11 +17,11 @@ These tests are suposed to be executed as part of the continuous integration flo
 
 Examples:
 
-_single class execution_
+_**single class execution**_
 
 ` mvn verify -DSECS=5 -Dit.test=com.stratio.qa.hol.testsAT.ITsample `
 
-_group execution_
+_**group execution**_
 
 ` mvn verify -DSECS=5 -Dgroups=hol `
 
@@ -29,7 +29,7 @@ _group execution_
 
 As part of BDT implementation, there are a couple of AspectJ aspects which may be useful for your scenarios:
 
-- RunOnTagAspect:
+- **RunOnTagAspect**:
 
 ` @runOnEnv(METRIC_HOST) `
 
@@ -58,7 +58,7 @@ _Example @skipOnEnv:_
 
 This scenario will be omitted if environment vairable SECS_2 is defined.
 
-- IgnoreTagAspect
+- **IgnoreTagAspect**
 
 An AspectJ aspect that allows the skipping of an scenario or a feature. To do so a tag must be used before the scenario or the feature. Additionally an ignored reason can be set.
 
@@ -72,7 +72,7 @@ An AspectJ aspect that allows the skipping of an scenario or a feature. To do so
 
 This last ignored reason is associated to a ticket in Jira. After executing the test class the ticket link is shown as execution result.
 
-- IncludeTagAspect
+- **IncludeTagAspect**
 
 An AspectJ aspect that includes an scenario before the taged one. It manages parameters as well.
 
@@ -88,7 +88,6 @@ _Examples:_
     Scenario: Dummy scenario
           And I wait '${SECS}' seconds
 ` 
-
 
 ` 
     @include(feature:sample.feature,scenario:Not so dummy scenario,params:param1=1)
