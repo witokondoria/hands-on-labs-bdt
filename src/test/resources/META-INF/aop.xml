@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<aspectj>
+	<aspects>
+		<aspect name="com.stratio.qa.aspects.RunOnTagAspect" />
+		<aspect name="com.stratio.qa.aspects.IgnoreTagAspect" />
+		<aspect name="com.stratio.qa.aspects.AssertJAspect" />
+		<aspect name="com.stratio.qa.aspects.SeleniumAspect" />
+		<aspect name="com.stratio.qa.aspects.BrowsersDataProviderAspect" />
+		<aspect name="com.stratio.qa.aspects.ReplacementAspect" />
+		<aspect name="com.stratio.qa.aspects.IncludeTagAspect" />
+	</aspects>
+	<weaver options="-Xlint:ignore -Xset:weaveJavaPackages=true,weaveJavaxPackages=true">
+		<dump within="com.stratio.qa.specs..*" beforeandafter="true"/>
+	</weaver>
+</aspectj>
